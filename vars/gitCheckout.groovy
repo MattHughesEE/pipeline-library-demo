@@ -2,7 +2,7 @@ def call(Map stageParams) {
 
 checkout([
     $class: 'GitSCM', 
-    branches: [[name: '*/master']],
+    branches: [[name: 'stageParams.branch']],
     doGenerateSubmoduleConfigurations: false, 
     extensions: [], 
     submoduleCfg: [], 
